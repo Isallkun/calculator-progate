@@ -26,7 +26,7 @@ numbers.forEach((number) => {
 const operators = document.querySelectorAll(".operator")
 operators.forEach((operator) => {
 	operator.addEventListener("click", (event) => {
-		console.log(event.target.value)
+		inputOperator(event.target.value)
 	})
 })
 
@@ -59,8 +59,6 @@ const calculate = () => {
 		case "/" :
 			result = parseFloat(prevNumber) / parseFloat(currentNumber)
 			break
-		case "%":
-			result = parseFloat(prevNumber) / 100
 		default:
 			return		
 	}
